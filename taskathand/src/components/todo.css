@@ -1,0 +1,129 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.todo-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todo-details header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .5em 1em;
+}
+
+.todo-details .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1em;
+}
+
+.todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 2em;
+}
+
+.todo form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2em;
+}
+
+.todo form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.todo ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: .75em;
+  margin: .75em .5em;
+}
+
+.todo ul li.complete-true span {
+  background: pink;
+  text-decoration: line-through;
+}
+
+.todo ul li.complete-true span:hover {
+  background: seagreen;
+}
+
+.todo ul li span {
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+.todo ul li span:hover {
+  background: pink;
+}
+
+.todo ul li span, .todo ul li input {
+  border: .5px solid #eee;
+  display: inline-block;
+  padding: .2em .25em;
+  width: 300px;
+}
+
+.todo ul li button {
+  background: transparent;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 .75em;
+}
+/*# sourceMappingURL=todo.css.map */
