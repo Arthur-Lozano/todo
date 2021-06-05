@@ -23,11 +23,20 @@ body, html {
 }
 
 .todo {
-
   display:flex;
   flex-direction:row;
   justify-content: flex-start;
   margin: 2em;
+  &.complete-true {
+    span {
+      background: pink;
+      text-decoration:line-through;
+      &:hover {
+         background: seagreen;
+      }
+    }
+  }
+  
 
   form {
 
