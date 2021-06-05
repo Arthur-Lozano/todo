@@ -1,5 +1,6 @@
 import { Toast } from 'react-bootstrap';
 import React, { useState } from 'react';
+import '../components/todo.scss'
 // import ToastHeader from 'react-bootstrap/ToastHeader'
 
 
@@ -11,11 +12,19 @@ function TodoList(props) {
       <Toast onClose={() => setShow(false)} show={true} onClick={() => props.handleComplete(item._id)}>
         <Toast.Header closeButton='true'>
         </Toast.Header>
-        <Toast.Body className={`complete-${item.complete.toString()}`}
-          // Keys do not have to be unique globally. They just need to be unique across sibling elements.
-          key={item._id}>
+        <Toast.Body>
           <strong className="mr-auto">Task:</strong>
           {item.text}</Toast.Body>
+        <ul>
+          <li
+            className={`complete-${item.complete.toString()}`}
+            key={item._id}
+          >
+            <span onClick={() => props.handleComplete(item._id)}>
+              {item.text}
+            </span>
+          </li>
+        </ul>
       </Toast >
     ))
   );
