@@ -1,7 +1,5 @@
 import { Toast } from 'react-bootstrap';
 import React, { useState } from 'react';
-import '../components/todo.scss'
-// import ToastHeader from 'react-bootstrap/ToastHeader'
 
 
 
@@ -12,7 +10,7 @@ function TodoList(props) {
       <Toast onClose={() => setShow(false)} show={true} onClick={() => props.handleComplete(item._id)}>
         <Toast.Header closeButton='true'>
         </Toast.Header>
-        <Toast.Body>
+        <Toast.Body onClick={() => { console.log('Hello Hoob') }}>
           <strong className="mr-auto">Task:</strong>
           {item.text}</Toast.Body>
         <ul>
