@@ -1,10 +1,11 @@
-
 require('../models/index');
 const db = require('../models/')
 
 const express = require('express');
 const app = express();
 app.use(express.json());
+const cors = require('cors')
+app.use(cors());
 
 const PORT = process.env.PORT || 3010
 
@@ -54,7 +55,7 @@ app.delete("/todos/:id", async (req, res, next) => {
 app.use((err, req, res, next) => {
   return res.status(err.status || 400).json({
     status: err.status || 400,
-    message: err.message || "there was an error processing request",
+    message: err.message || "Sorry, that was a bad request",
   })
 })
 
