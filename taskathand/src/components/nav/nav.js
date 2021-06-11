@@ -1,7 +1,8 @@
 import { Nav, Navbar } from 'react-bootstrap';
 
 
-let Navbars = () => {
+
+let Navbars = (props) => {
   return (
     <>
       <Navbar bg="primary" expand="lg">
@@ -19,7 +20,10 @@ let Navbars = () => {
         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
       >
         <Nav.Item>
-          <Nav.Link href="/home">Todo list manager</Nav.Link>
+          <Nav.Link>
+            {/* Need this imported in as props? in order to take the current list from todo */}
+            {/* There are {list.filter(item => !item.complete).length} Items To Complete */}
+          </Nav.Link>
         </Nav.Item>
       </Nav>
     </>

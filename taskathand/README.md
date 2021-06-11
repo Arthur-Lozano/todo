@@ -3,10 +3,10 @@
 ### Setup
 
 - .env requirements
-- PORT - Port Number
+- PORT - http://localhost:3000/
 - Running the app
 - npm start
-- Endpoint: /status
+- Endpoint: /todo
 - Returns Object
 
 
@@ -14,4 +14,4 @@
 - Unit Tests: npm run test
 - Lint Tests: npm run lint
 
-* UML
+* [UML]()

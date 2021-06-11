@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
-import Form from './hooks/formhook';
+import { useForm } from "react-hook-form";
 
-const TodoForm = (props) => {
+
+const ToDoForm = (props) => {
 
   const [item, itemsState] = useState({});//or bool
+
+  const { register, handleSubmit } = useForm();
+
 
 
 
@@ -11,39 +15,44 @@ const TodoForm = (props) => {
     itemsState({ ...item, [e.target.name]: e.target.value });
   };
 
-  let handleSubmit = (e) => {
-    e.preventDefault();
-    e.target.reset();
+  // let handleSubmitOriginal = (e) => {
+  // };
+  const onSubmit = (e) => {
+    // e.target.reset();
     props.handleSubmit(item);
-    itemsState({});
-  };
+    // itemsState({});
+    console.log('Giving me this object', item);
+  }
 
 
   return (
     <>
-      <Form />
-      {/* <h3>Add Item</h3>
-      <form onSubmit={handleSubmit}>
+      <h3>Add Item</h3>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <label>
           <span>To Do Item</span>
           <input
             name="text"
             placeholder="Add To Do List Item"
             onChange={handleInputChange}
+            register={register} required
           />
+
         </label>
         <label>
           <span>Difficulty Rating</span>
-          <input defaultValue="1" type="range" min="1" max="5" name="difficulty" onChange={handleInputChange} />
+          <input defaultValue="1" type="range" min="1" max="5" name="difficulty" onChange={handleInputChange}
+            register={register} required />
         </label>
         <label>
           <span>Assigned To</span>
-          <input type="text" name="assignee" placeholder="Assigned To" onChange={handleInputChange} />
+          <input type="text" name="assignee" placeholder="Assigned To" onChange={handleInputChange}
+            register={register} required />
         </label>
-        <button>Add Item</button>
-      </form> */}
+        <button type='submit'>Add Item</button>
+      </form>
     </>
   );
 }
 
-export default TodoForm;
+export default ToDoForm;

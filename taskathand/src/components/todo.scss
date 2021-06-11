@@ -4,6 +4,25 @@ body, html {
   padding:0;
   width: 100%;
 }
+
+.card{
+
+  align-items: center;
+  display:flex;
+  flex-direction:row;
+  font-size: 1.1em;
+  margin: .75em .5em;
+
+  &.complete-true {
+    span {
+      background: pink;
+      text-decoration:line-through;
+      &:hover {
+         background: seagreen;
+      }
+    }
+  }
+}
 .todo-details {
   display:flex;
   flex-direction:column;

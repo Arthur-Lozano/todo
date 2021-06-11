@@ -12,7 +12,7 @@ module.exports = function (app) {
   const env = app.get('env');
   // **ALLOW CORS**** WARN: NOT SECURE
   app.use(cors());
-  app.use(compression()); Expre
+  app.use(compression());
   app.use(json({ extended: false, limit: '50mb' }));
   app.use(json({ limit: '50mb' }));
   if ('development' === env || 'test' === env) {

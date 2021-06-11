@@ -3,9 +3,7 @@ import TodoForm from './form.js';
 import TodoList from './list.js';
 import Nav from './nav/nav';
 import { Card } from 'react-bootstrap';
-
-
-
+import Pagination from '../components/pagination/pagination';
 import './todo.scss';
 
 const ToDo = (props) => {
@@ -68,8 +66,10 @@ const ToDo = (props) => {
           />
         </div>
       </section>
+      <Pagination />
     </>
   )
 }
+
 
 export default ToDo;
