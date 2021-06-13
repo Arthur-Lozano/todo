@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Header from './components/nav/nav';
 // import Footer from './components/Footer.js';
 import Form from './components/form'
-import { ThemeContext } from './context/theme.js';
+import { ThemeContext } from './components/context/theme.js';
 
 const styles = {
   dark: {
